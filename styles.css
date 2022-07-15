@@ -3,14 +3,16 @@
   margin: 0;
 }
 
-/* #grid__container {
-} */
+#grid__container {
+  /* float: right; */
+  margin: 20px;
+}
 
-#grid__container > #col__div {
+#grid__container > .col__div {
   display: flex;
   flex-wrap: wrap;
 }
-#grid__container > #col__div > #row__div {
+#grid__container > .col__div > .row__div {
   height: 20px;
   width: 20px;
   border: 1px solid black;
