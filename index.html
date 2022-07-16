@@ -9,12 +9,19 @@
   </head>
   <body>
     <div id="controls__container">
-      <input type="number" value="16" id="grid__value" min="1" max="100" />
+      <input
+        type="range"
+        value="16"
+        id="grid__value"
+        min="1"
+        max="100"
+        onchange="gridInput()"
+      />
       <input
         type="color"
         value="#000"
         id="color__value"
-        onchange="colorVal()"
+        onchange="colorInput()"
       />
       <button id="color__button">Color Mode</button>
       <button id="rainbow__button">Rainbow Mode</button>
