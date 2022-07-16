@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="controls__container">
+      <input type="number" value="16" id="grid__value" min="1" max="100" />
+      <input
+        type="color"
+        value="#000"
+        id="color__value"
+        onchange="colorVal()"
+      />
+      <button id="color__button">Color Mode</button>
+      <button id="rainbow__button">Rainbow Mode</button>
+      <button id="clear__button">Clear</button>
+    </div>
     <div id="grid__container"></div>
     <script src="script.js"></script>
   </body>
