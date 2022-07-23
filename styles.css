@@ -8,12 +8,12 @@
   margin: 20px;
   height: 400px;
   max-width: 400px;
-  border: 1px solid navy;
+  box-shadow: 1px 1px 5px 5px #888888;
 }
 
 #grid__container > .col__div {
   display: flex;
 }
-#grid__container > .col__div > .row__div {
+/* #grid__container > .col__div > .row__div {
   border: 1px solid black;
-}
+} */
