@@ -4,7 +4,6 @@
 }
 
 #grid__container {
-  /* float: right; */
   margin: 20px;
   height: 400px;
   max-width: 400px;
@@ -14,6 +13,3 @@
 #grid__container > .col__div {
   display: flex;
 }
-/* #grid__container > .col__div > .row__div {
-  border: 1px solid black;
-} */

@@ -1,6 +1,7 @@
 let gridContainer = document.getElementById('grid__container')
 let givenRC = 16
 let givenColor = document.getElementById('color__value').value
+let rainbowSwitch = false
 
 let createGrid = (gridNum) => {
   let col = gridNum
@@ -36,7 +37,18 @@ let createGrid = (gridNum) => {
     let id = allRowElements[i].id
     let targetElement = document.getElementById(id)
     targetElement.addEventListener('mouseover', function () {
-      if (mouseClick) targetElement.style.backgroundColor = givenColor
+      if (mouseClick) {
+        if (rainbowSwitch) {
+          function randValue() {
+            return Math.floor(Math.random() * 255) //255 birng the hihest RGB color value
+          }
+          let randColor = `rgb(${randValue()}, ${randValue()}, ${randValue()})`
+          givenColor = randColor
+          targetElement.style.backgroundColor = givenColor
+        } else {
+          targetElement.style.backgroundColor = givenColor
+        }
+      }
     })
     targetElement.addEventListener('mousedown', function () {
       targetElement.style.backgroundColor = givenColor
@@ -50,14 +62,16 @@ let gridInput = () => {
   givenRC = document.getElementById('grid__value').value
   gridContainer.innerHTML = ''
   createGrid(givenRC)
+  rainbowSwitch = false
 }
 
-let colorMode = () => {
+let colorInput = () => {
   givenColor = document.getElementById('color__value').value
+  rainbowSwitch = false
 }
-
 let eraseInput = () => {
   givenColor = '#fff'
+  rainbowSwitch = false
 }
 
 let clearInput = () => {
@@ -65,4 +79,9 @@ let clearInput = () => {
   for (var i = 0; i < allRowElements.length; i++) {
     allRowElements[i].style.backgroundColor = '#fff'
   }
+  rainbowSwitch = false
+}
+
+let rainbowMode = () => {
+  rainbowSwitch = true
 }
