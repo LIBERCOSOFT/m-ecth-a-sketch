@@ -9,15 +9,18 @@
   </head>
   <body>
     <div id="controls__container">
-      <p id="grid__number"></p>
-      <input
-        type="range"
-        value="16"
-        id="grid__value"
-        min="1"
-        max="100"
-        onchange="gridInput()"
-      />
+      <h1>ECTH A SKETCH</h1>
+      <div>
+        <p id="grid__number"></p>
+        <input
+          type="range"
+          value="16"
+          id="grid__value"
+          min="1"
+          max="100"
+          onchange="gridInput()"
+        />
+      </div>
       <input
         type="color"
         value="#000"
@@ -26,7 +29,7 @@
       />
       <button id="color__button" onclick="colorInput()">Color Mode</button>
       <button id="rainbow__button" onclick="rainbowMode()">Rainbow Mode</button>
-      <button id="clear__button" onclick="eraseInput()">Eraser</button>
+      <button id="erase__button" onclick="eraseInput()">Eraser</button>
       <button id="clear__button" onclick="clearInput()">Clear</button>
     </div>
     <div id="grid__container"></div>

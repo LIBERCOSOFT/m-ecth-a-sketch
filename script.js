@@ -55,6 +55,8 @@ let createGrid = (gridNum) => {
     })
   }
   document.getElementById('grid__number').innerHTML = gridNum
+  document.getElementById('color__button').style.backgroundColor = '#000'
+  document.getElementById('color__button').style.color = '#fff'
 }
 
 createGrid(givenRC)
@@ -69,10 +71,22 @@ let gridInput = () => {
 let colorInput = () => {
   givenColor = document.getElementById('color__value').value
   rainbowSwitch = false
+  document.getElementById('erase__button').style.backgroundColor = ''
+  document.getElementById('erase__button').style.color = ''
+  document.getElementById('color__button').style.backgroundColor = '#000'
+  document.getElementById('color__button').style.color = '#fff'
+  document.getElementById('rainbow__button').style.backgroundColor = ''
+  document.getElementById('rainbow__button').style.color = ''
 }
 let eraseInput = () => {
   givenColor = '#fff'
   rainbowSwitch = false
+  document.getElementById('erase__button').style.backgroundColor = '#000'
+  document.getElementById('erase__button').style.color = '#fff'
+  document.getElementById('color__button').style.backgroundColor = ''
+  document.getElementById('color__button').style.color = ''
+  document.getElementById('rainbow__button').style.backgroundColor = ''
+  document.getElementById('rainbow__button').style.color = ''
 }
 
 let clearInput = () => {
@@ -85,4 +99,10 @@ let clearInput = () => {
 
 let rainbowMode = () => {
   rainbowSwitch = true
+  document.getElementById('erase__button').style.backgroundColor = ''
+  document.getElementById('erase__button').style.color = ''
+  document.getElementById('color__button').style.backgroundColor = ''
+  document.getElementById('color__button').style.color = ''
+  document.getElementById('rainbow__button').style.backgroundColor = '#000'
+  document.getElementById('rainbow__button').style.color = '#fff'
 }
