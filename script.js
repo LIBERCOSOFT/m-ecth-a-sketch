@@ -54,6 +54,7 @@ let createGrid = (gridNum) => {
       targetElement.style.backgroundColor = givenColor
     })
   }
+  document.getElementById('grid__number').innerHTML = gridNum
 }
 
 createGrid(givenRC)
